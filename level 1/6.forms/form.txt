@@ -1,0 +1,111 @@
+Below is the full explanation of the form code and **each tag is explained clearly**.
+
+---
+
+# **HTML Code**
+
+```html
+<form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br><br>
+
+    <button type="submit">Submit</button>
+</form>
+```
+
+---
+
+# **Explanation (Line By Line)**
+
+### **1. `<form>`**
+
+* यह पूरी form का container है।
+* इसके अंदर सारे inputs, buttons, labels आते हैं।
+* Browser इसी tag से समझता है कि यह एक form है।
+
+---
+
+### **2. `<label>`**
+
+* Label user को बताता है कि यह input किसके लिए है (Name, Email, Password).
+* Accessibility (screen reader) के लिए भी important है।
+
+Example:
+
+```html
+<label for="name">Name:</label>
+```
+
+---
+
+### **3. `for="name"`**
+
+* यह label को input से connect करता है।
+* `for` का value input के `id` के बराबर होना चाहिए।
+* जब label पर click करते हैं, input focus हो जाता है।
+
+---
+
+### **4. `<input type="text">`**
+
+* Simple text field बनाता है, जहाँ user अपना नाम टाइप करेगा।
+
+Attributes:
+
+* `id="name"` → label input को पहचान सके
+* `name="name"` → form submit होने पर data को name key मिलती है
+
+---
+
+### **5. `<input type="email">`**
+
+* यह email field है।
+* Browser खुद check करेगा कि valid email है या नहीं ([example@gmail.com](mailto:example@gmail.com)).
+
+---
+
+### **6. `<input type="password">`**
+
+* Password को hide करके (dots ••••) show करता है।
+* Security के लिए use होता है।
+
+---
+
+### **7. `<br><br>`**
+
+* Line break देता है ताकि inputs के बीच space आए।
+
+---
+
+### **8. `<button type="submit">Submit</button>`**
+
+* Form को submit करने वाला button।
+* Form के data को server पर भेजता है (जब action attribute use करेंगे)।
+
+---
+
+# **Short Summary**
+
+| Tag               | Use                             |
+| ----------------- | ------------------------------- |
+| `<form>`          | पूरा form container             |
+| `<label>`         | Input का नाम दिखाने के लिए      |
+| `<input>`         | User से data लेने के लिए        |
+| `type="text"`     | Text input                      |
+| `type="email"`    | Email input (validation के साथ) |
+| `type="password"` | Password hidden input           |
+| `<button>`        | Form submit button              |
+| `<br>`            | Line break (spacing)            |
+
+---
+
+अगर चाहिए:
+✓ अगला form question
+✓ Form attributes (action, method) explanation
+✓ HTML form validation basics
